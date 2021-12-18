@@ -1,5 +1,15 @@
 # Comparisontask
 
+* This project uses angular as front end 
+* Comparison task i.e. project contains comparison between varous tour and travel packages.
+* Comparsion is done betwwen two packages on the bases of number of days , price and location etc.
+* packages can also be filtered out on the bases of location and initially all location and packages are displayed.
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
 ## Development server
