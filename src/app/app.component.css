@@ -1,0 +1,60 @@
+.header{
+    
+    width: auto;
+    height: 100px;
+    background-color: goldenrod;
+    align-content: center;
+    border-style: solid;
+    border-color: darkred;
+    padding-top: 1%;
+    
+
+}
+
+.sbar{
+    margin-left: 30%;
+    margin-right: 30%;
+    
+   
+}
+
+
+input[type="button"]{
+    border-radius: 10%;
+    border-style: solid;
+    border-color: indigo;
+    color:mediumblue;
+}
+
+input [type="search"]{
+    background-color: palegoldenrod;
+    color:brown;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.main{
+    background-color: cadetblue;
+    border-style: solid;
+    padding: 4%;
+    border-color: darkred;
+}
+
+th{
+    background-color:lightblue;
+    font-size: 150%;
+    font-weight: bold;
+    
+}
+
+td{
+    padding: 1%;
+    text-align: center;
+}
+
+.comp{
+    background-color: lightcoral;
+    border-style: solid;
+    border-color:darkred;
+    padding: 5%;
+}

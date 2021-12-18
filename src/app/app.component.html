@@ -1,0 +1,179 @@
+<div>
+  <div class="header">
+    <table class="sbar">
+      <tr>
+        <td>
+          <input type="button" value="Search" (click)="searchPackage(packagename.value)">
+        </td>
+        <td>
+          <input type="search" placeholder="Enter package name" #packagename>
+        </td>
+
+      </tr>
+
+    </table>
+  </div>
+  <div class ="main">
+    <table *ngIf="!status">
+      <tr>
+        <th>
+          Select
+        </th>
+        <th>
+          Image
+        </th>
+        <th>
+          Pacakge Name
+        </th>
+        <th>
+          Number Of Days
+        </th>
+        <th>
+          Cost
+        </th>
+        <th>
+          Discount %
+        </th>
+      </tr>
+
+      <tr *ngFor="let package of pack ">
+        <td>
+          <input type="checkbox" name="selectedpackage" (click)="addpackage(package)">
+        </td>
+        <td>
+          <img  width="100%" height="100%"  src="assets/{{package.packageName}}.jpg">
+        </td>
+        <td>
+          {{package.packageName}}
+        </td>
+        <td>
+          {{package.noofdays}}
+        </td>
+        <td>
+          {{package.cost}}
+        </td>
+        <td>
+          {{package.discount}}
+        </td>
+      </tr>
+    </table>
+    <table *ngIf="packagename.value==enteredpackage">
+      <tr>
+        <th>
+          Select
+        </th>
+        <th>
+          Image
+        </th>
+        <th>
+          Pacakge Name
+        </th>
+        <th>
+          Number Of Days
+        </th>
+        <th>
+          Cost
+        </th>
+        <th>
+          Discount %
+        </th>
+      </tr>
+
+      <tr *ngFor="let package of filteredpack ">
+        <td>
+          <input type="checkbox" name="selectedpackage" (click)="addpackage(package)">
+        </td>
+        <td>
+          <img  width="100%" height="100%"  src="assets/{{package.packageName}}.jpg">
+        </td>
+        <td>
+          {{package.packageName}}
+        </td>
+        <td>
+          {{package.noofdays}}
+        </td>
+        <td>
+          {{package.cost}}
+        </td>
+        <td>
+          {{package.discount}}
+        </td>
+      </tr>
+    </table>
+  </div>
+ <div class ="comp" *ngIf="length==2">
+    <h2>
+      COMPARISON BETWEEN SELECTED PACKAGES
+    </h2>
+    <table>
+      <tr>
+        <th>
+          Content
+        </th>
+        <th>
+          Package 1
+        </th>
+        <th>
+          Package 2
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Package Name
+        </td>
+        <td>
+          {{selectedpack[0].packageName}}
+        </td>
+        <td>
+          {{selectedpack[1].packageName}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Number Of Days
+        </td>
+        <td>
+          {{selectedpack[0].noofdays}}
+        </td>
+        <td>
+          {{selectedpack[1].noofdays}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Cost
+        </td>
+        <td>
+          {{selectedpack[0].cost}}
+        </td>
+        <td>
+          {{selectedpack[1].cost}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Discount %
+        </td>
+        <td>
+          {{selectedpack[0].discount}}
+        </td>
+        <td>
+          {{selectedpack[1].discount}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Reviews
+        </td>
+        <td>
+          {{selectedpack[0].reviews}}
+        </td>
+        <td>
+          {{selectedpack[1].reviews}}
+        </td>
+      </tr>
+    
+    </table>
+
+  </div> 
+</div>
